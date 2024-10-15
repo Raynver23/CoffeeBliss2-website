@@ -1,0 +1,336 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f0e7;
+    color: #4b2e21;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header - Sticky to follow scroll */
+header {
+    background-color: #4b2e21;
+    color: #f7f0e7;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: #6d2c00;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #e6b800;
+}
+
+/* Hero Section - Fullscreen */
+#hero {
+    background: url('brewery-hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    position: relative;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 49, 0, 0.979);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h2 {
+    font-size: 4rem;
+    color: #ffcc00;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.hero-btn {
+    background: #ffcc00;
+    color: #8a3700;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    background-color: #853500;
+}
+
+/* Services Section */
+.section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    background-color: #fff6e5;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    color: #7b4d29;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #5e4631;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Section */
+#menu {
+    background-color: #4b2e21;
+    padding: 5rem 0;
+    color: #f7f0e7;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #ffcc00;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #fff6e5;
+    border-radius: 20px;
+    padding: 40px;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.8rem;
+    color: #7b4d29;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #5e4631;
+}
+
+.menu-btn {
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Footer */
+footer {
+    background-color: #4b2e21;
+    color: #f7f0e7;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Floating Button */
+.menu-button {
+    background-color: #ffcc00;
+    color: #4b2e21;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-item, .service {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item, .service {
+        width: 100%;
+    }
+    
+    .menu-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+/* Contact Us Section */
+.contact-section {
+    background-color: #f7f0e7; /* Light background for the contact section */
+    padding: 4rem 0; /* Spacious padding */
+    position: relative;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #4b2e21; /* Dark coffee color for the heading */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+.contact-section p {
+    margin-bottom: 2rem; /* Space below paragraph */
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: #fff; /* White background for contrast */
+    padding: 2rem; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Maximum width for the box */
+    margin: 0 auto; /* Center the box */
+}
+
+.contact-box label {
+    display: block; /* Make labels take the full width */
+    margin-bottom: 0.5rem; /* Space below labels */
+    font-weight: bold; /* Make labels bold */
+    color: #4b2e21; /* Dark color for labels */
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 1rem; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 1rem; /* Font size for inputs */
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    border-color: #ffcc00; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-box button {
+    background-color: #ffcc00; /* Button color */
+    color: #4b2e21; /* Dark text color */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1.2rem; /* Font size for button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease; /* Transition for background */
+}
+
+.contact-box button:hover {
+    background-color: #e6b800; /* Darker color on hover */
+}
